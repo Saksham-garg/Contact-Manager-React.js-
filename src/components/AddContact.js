@@ -1,10 +1,12 @@
 import React from "react";
 
+
 export default class AddContact extends React.Component{
    state={
             name:"",
             email:""
         }
+
     
     add = (e)=>{
         e.preventDefault();
@@ -12,7 +14,11 @@ export default class AddContact extends React.Component{
             alert("All fileds are mandatory");
             return;
         }
+
+        
         this.props.getdata(this.state);
+        this.setState({name:"",email:""});
+      
     }
    
     render(){

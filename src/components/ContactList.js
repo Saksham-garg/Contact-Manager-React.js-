@@ -1,8 +1,8 @@
 import React from "react";
+import {Link} from 'react-router-dom'
 import ContactCard from '../components/ContactCard' 
 export default function ContactList(props) {
-    console.log(props.contactprop);
-
+    
     function deleteHandler(id){
         props.getContactid(id);
     }
@@ -11,7 +11,9 @@ export default function ContactList(props) {
         
     });
     return(<div className="ui celled list">
-            {rendercontactlist}
+        <h2>Hello</h2>
+        <Link to="/add"><button className="ui button blue">Add Contact</button></Link>
+        {rendercontactlist}
      </div> );
   
 }
